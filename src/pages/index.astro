@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout title="Happy National GF Day!">
-	<main class="bg-purple-300 h-screen w-screen py-10">
+	<main class="bg-purple-300 h-full w-full py-10 px-3">
 		<h1 class="text-center font-semibold text-3xl dancing-script">
 			Happy National Girlfriend Day!
 		</h1>
@@ -14,8 +14,10 @@ import Layout from "../layouts/Layout.astro"
 		</div>
 
 		<p class="mt-5 text-center font-['Roboto']">
-			<span class="font-bold border-b-black border-b">Thank You</span> Jasmine
-			for being such a great girlfriend for the past OMG ALMOST 4 MONTHS??
+			<span class="font-bold border-b-violet-800 border-b text-violet-800"
+				>Thank You</span
+			> Jasmine for being such a great girlfriend for the past OMG ALMOST 4
+			MONTHS??
 
 			<br />
 		</p>
@@ -24,6 +26,17 @@ import Layout from "../layouts/Layout.astro"
 			Before I write anything else to you, I'd like to show you some
 			random photos of us recently.
 		</p>
+
+		<div class="flex flex-col gap-5 mt-5 items-center">
+			<img src="pic-1.jpg" />
+			<img src="pic-2.jpg" />
+			<button
+				onclick="test()"
+				class="click-me bg-purple-500 text-white w-fit p-3 rounded-lg"
+				>Click Me!</button
+			>
+			<img id="funny" class="hidden" src="pic-3.jpg" />
+		</div>
 	</main>
 </Layout>
 <style>
@@ -34,3 +47,17 @@ import Layout from "../layouts/Layout.astro"
 		font-optical-sizing: auto;
 	}
 </style>
+
+<script>
+	const buttons = document.querySelectorAll("button.click-me")
+
+	// Handle clicks on each button.
+	buttons.forEach((button) => {
+		button.addEventListener("click", () => {
+			const element = document.getElementById("funny")
+			if (element) {
+				element.classList.remove("hidden")
+			}
+		})
+	})
+</script>
