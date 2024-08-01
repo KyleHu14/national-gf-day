@@ -4,8 +4,20 @@ import Layout from "../layouts/Layout.astro"
 
 <Layout title="Happy National GF Day!">
 	<main class="bg-purple-300 h-screen w-screen py-10">
-		<h1 class="text-center font-semibold text-2xl">
+		<h1 class="text-center font-semibold text-3xl dancing-script">
 			Happy National Girlfriend Day!
 		</h1>
+
+		<div class="flex justify-center gap-5 pt-10">
+			<img class="rounded-lg w-32 h-32" src="cat-2.jpg" />
+			<img class="rounded-lg w-32 h-32" src="cat-1.jpg" />
+		</div>
 	</main>
 </Layout>
+<style>
+	@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+	.dancing-script {
+		font-family: "Dancing Script", cursive;
+		font-optical-sizing: auto;
+	}
+</style>
